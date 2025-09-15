@@ -18,3 +18,24 @@ h1:hover {
   transform: scale(1.05) rotate(-2deg);
   text-shadow: 4px 4px 16px rgba(252, 92, 125, 0.4);
 }
+
+footer {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  background: pink;
+  color: #000000;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 -4px 16px rgba(106, 130, 251, 0.12);
+}
+
+footer a {
+  color: #1700e2;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #ff6f61;
+}

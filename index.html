@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--adding typewriter effect library-->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!--adding axios library-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Recipe generator</title>
   </head>
@@ -15,22 +17,23 @@
       </header>
 
       <main>
-        <form id="recipe-form">
-          <input
-            type="text"
-            placeholder="Enter the name of the recipe"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
+        <div class="form-container">
+          <form id="recipe-form">
+            <input
+              type="text"
+              placeholder="Enter the name of the recipe"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
 
-        <div id="recipe-result" class="recipe-result">
-          <h2>Generated Recipe:</h2>
-          <pre id="recipe-text"></pre>
+          <div class="hint">i.e: Cheese Toast</div>
         </div>
+        <div class="recipe hidden" id="recipe"></div>
       </main>
 
       <footer>

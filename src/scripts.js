@@ -1,15 +1,14 @@
 function displayRecipe(response) {
-  new Typewriter("#recipe-result", {
-    Strings: ["Generating your recipe..."],
+  new Typewriter("#recipe", {
+    strings: response.data.answer,
     autoStart: true,
     delay: 1,
     cursor: "",
-    loop: false,
   });
 }
 
 // Function to handle form submission and generate recipe
-function generateRecipe() {
+function generateRecipe(event) {
   event.preventDefault();
 
   let instructionsInput = document.querySelector("#user-instructions");
@@ -19,7 +18,7 @@ function generateRecipe() {
   let prompt = `User instructions: Generate a South African recipe about ${instructionsInput.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  let receipeElement = document.querySelector("#recipe-result");
+  let receipeElement = document.querySelector("#recipe");
   receipeElement.classList.remove("hidden");
   receipeElement.innerHTML = `<div class="generating"> Generating your recipe... ${instructionsInput.value}</div>`;
 

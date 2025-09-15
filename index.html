@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Document</title>
+    <title>AI Recipe generator</title>
   </head>
   <body>
-    <h1>Welcome to the AI generator</h1>
+    <header>
+        <h1>Welcome to the AI Recipe generator</h1>
+    </header>
+    
+
+
+    <main>
+      <form id="recipe-form">
+        <input type="text" placeholder="Enter the name of the recipe" autofocus required autocomplete="off" />
+        <input type="submit" />
+      </form>
+        
+      <div id="recipe-result" class="hidden">
+        <h2>Generated Recipe:</h2>
+        <pre id="recipe-text"></pre>
+      </div>
 
     <footer>
       <p>

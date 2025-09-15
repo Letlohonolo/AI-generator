@@ -7,45 +7,53 @@
     <title>AI Recipe generator</title>
   </head>
   <body>
-    <header>
+    <div class="container">
+      <header>
         <h1>Welcome to the AI Recipe generator</h1>
-    </header>
-    
+      </header>
 
+      <main>
+        <form id="recipe-form">
+          <input
+            type="text"
+            placeholder="Enter the name of the recipe"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
 
-    <main>
-      <form id="recipe-form">
-        <input type="text" placeholder="Enter the name of the recipe" autofocus required autocomplete="off" />
-        <input type="submit" />
-      </form>
-        
-      <div id="recipe-result" class="hidden">
-        <h2>Generated Recipe:</h2>
-        <pre id="recipe-text"></pre>
-      </div>
+        <div id="recipe-result" class="recipe-result">
+          <h2>Generated Recipe:</h2>
+          <pre id="recipe-text"></pre>
+        </div>
+      </main>
 
-    <footer>
-      <p>
-        Made with ❤️ by
-        <a
-          href="https://www.shecodes.io/graduates/95185-letlohonolo-mosia"
-          target="_blank"
-          >Letlohonolo</a
-        >
-      </p>
-      <p>
-        This is my
-        <a
-          href="https://github.com/Letlohonolo/AI-generator.git"
-          target="_blank"
-          >project</a
-        >on github
-      </p>
-      <p>
-        The project has been deployed on
-        <a href="https://ai-generato.netlify.app/" target="_blank">Netlify</a>
-      </p>
-    </footer>
+      <footer>
+        <p>
+          Made with ❤️ by
+          <a
+            href="https://www.shecodes.io/graduates/95185-letlohonolo-mosia"
+            target="_blank"
+            >Letlohonolo</a
+          >
+        </p>
+        <p>
+          This is my
+          <a
+            href="https://github.com/Letlohonolo/AI-generator.git"
+            target="_blank"
+            >project</a
+          >on github
+        </p>
+        <p>
+          The project has been deployed on
+          <a href="https://ai-generato.netlify.app/" target="_blank">Netlify</a>
+        </p>
+      </footer>
+    </div>
   </body>
   <script src="src/scripts.js"></script>
 </html>
